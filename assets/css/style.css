@@ -1,4 +1,14 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-}   
+}
+button {
+    border: none;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+button:hover {
+    cursor: pointer;
+    background-color: bisque;
+}

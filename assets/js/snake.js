@@ -1,8 +1,8 @@
 
 // Board
 var blockSize = 25;
-var rows = 20;
-var cols = 20;
+var rows = 25;
+var cols = 25;
 var board;
 var context;
 
@@ -19,7 +19,9 @@ var snakeBody = [];
 var foodX;
 var foodY;
 
+// End Game
 var gameOver = false;
+var restartButton;
 
 
 window.onload = function() {
@@ -33,6 +35,8 @@ window.onload = function() {
     // Update
     setInterval(update, 1000/10);
 }
+
+
 
 function update() {
     if (gameOver) {
@@ -73,12 +77,12 @@ function update() {
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
-            alert("Game Over");
+            alert("Game Over");  
         }
     }
 }
 
-// Movement
+// Key-Bindings
 function changeDirection(e) {
     if (e.code == "ArrowUp" && velocityY != 1) {
         velocityX = 0;

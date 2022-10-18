@@ -8,10 +8,19 @@
   <title>Snake</title>
 </head>
 
-  <body>
-
+<body>
 <h1>Snake</h1>
 <canvas id="board"></canvas>
-
+<div class="toolbar">
+    <div style="display:inline-block;margin-right:10px;">
+    <span>Theme:</span>
+    <select autocomplete="off" onchange="getTheme()" id="select">
+      <option>Default</option>
+      <option>Color Blind</option>
+    </select>
+  </div>
+<button id="restartButton">Restart Game</button>
+</div>
 </body>
+
 </html>
