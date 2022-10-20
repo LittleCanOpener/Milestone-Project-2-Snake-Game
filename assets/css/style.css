@@ -2,6 +2,9 @@ body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
+canvas{
+    box-shadow: black 20px 10px 50px
+}
 button {
     border: none;
     border-radius: 20px;
@@ -11,4 +14,12 @@ button {
 button:hover {
     cursor: pointer;
     background-color: bisque;
+}
+div > .playagain {
+    background-color: wheat;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
 }

@@ -1,11 +1,11 @@
 
 // Board
+var grid = document.querySelector(".grid")
 var blockSize = 25;
 var rows = 25;
 var cols = 25;
 var board;
 var context;
-
 // Snake Head
 var snakeX = blockSize * 5;
 var snakeY = blockSize * 5;
@@ -14,15 +14,28 @@ var velocityX = 0;
 var velocityY = 0;
 
 var snakeBody = [];
-
 // Food
 var foodX;
 var foodY;
-
-// End Game
+// Game
 var gameOver = false;
 var restartButton;
+// Time
+var intervalTime = 0;
+var interval = 0;
+// Score
+let playerScore = 0;
 
+// Popup
+var popup = document.querySelector(".popup");
+var playAgain = document.querySelector(".playAgain");
+
+document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("keyup", control)
+createBoard()
+startGame()
+playAgain.addEventListener("click", replay);
+})
 
 window.onload = function() {
     board = document.getElementById("board");
@@ -35,9 +48,6 @@ window.onload = function() {
     // Update
     setInterval(update, 1000/10);
 }
-
-
-
 function update() {
     if (gameOver) {
         return;
@@ -68,7 +78,7 @@ function update() {
     for (let i = 0; i < snakeBody.length; i++) {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
     }
-    // Game Over
+// Game Over
     if (snakeX < 0 || snakeX > cols*blockSize || snakeY < 0 || snakeY > rows*blockSize) {
         gameOver = true;
         alert("Game Over");
@@ -81,7 +91,6 @@ function update() {
         }
     }
 }
-
 // Key-Bindings
 function changeDirection(e) {
     if (e.code == "ArrowUp" && velocityY != 1) {
@@ -101,9 +110,17 @@ function changeDirection(e) {
         velocityY = 0;
     }
 }
-
 function placeFood() {
-    //0-1) *cols -> (0-19) -> 0-19 * 25
     foodX = Math.floor(Math.random() * cols) * blockSize;
     foodY = Math.floor(Math.random() * cols) * blockSize;
 }
+// Show Score
+function updateScore(){
+    const playerScorePara = document.getElementById("playerScore");
+    playerScorePara.textContent = `Player: ${playerScore}`;
+}
+// Event Listners
+choices.forEach(choice => choice.addEventListener('click', (event) => {
+	playRound(event);
+	updateScore()
+}));

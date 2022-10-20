@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/snake.js"></script>
   <title>Snake</title>
 </head>
 
@@ -19,8 +18,20 @@
       <option>Color Blind</option>
     </select>
   </div>
-<button id="restartButton">Restart Game</button>
+  <!--Play Again Button-->
+  <div class="playagain">
+  <button class="playAgain">Play Again</button>
+  </div>
+  <!--Score Counter & Header-->
+  <h1 class="scoreHeading" id="scoreHeading">Score</h1>
+  <div id="score" class="score">
+    <div class="playerSection">
+      <p id="playerScore">Score: 0</p>
+    </div>
+  </div>
 </div>
+<!--Script-->
+<script src="./assets/js/snake.js"></script>
 </body>
 
 </html>
