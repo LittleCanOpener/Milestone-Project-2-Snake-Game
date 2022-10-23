@@ -1,5 +1,9 @@
-# Snake-Game
-<h2>Technologies:</h2><hr>
+# Snake-Game - Milestone Project 2.
+<h1>Features:</h1><!--Comment-->
+<h1>Deployment:</h1><!--Comment-->
+<h1>Testing:</h1><!--Comment-->
+<h2>Feedback:</h2><hr>
+<h1>Technologies:</h1><!--Comment-->
 <img src="./assets/icons/Gitpod.svg" width="50px" height="50px">
 <h3>GitPod:</h3>
 <a href="https://www.gitpod.io/" target="_blank">GitPod</a>
@@ -37,3 +41,4 @@
 <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
 <p>Makes responsive design easier.</p>
 <p><h4>Why JavaScript :</h4>JavaScript has become integral to the Internet experience as developers build increased interaction and complexity into their applications. Search engines, ecommerce, content management systems, responsive design, social media and phone apps would not be possible without it.</p><!--Comment--><hr>
+<h1>Special Thanks & Acknowledgements</h1><!--Comment-->
