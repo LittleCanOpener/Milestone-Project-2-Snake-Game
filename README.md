@@ -2,7 +2,19 @@
 <h1>Features:</h1><!--Comment-->
 <h1>Deployment:</h1><!--Comment-->
 <h1>Testing:</h1><!--Comment-->
+<ul>
+<h3>Code Validators</h3>
+<li><a href="https://validator.w3.org/nu/#textarea" target="_blank">HTML</a> Validator Results:</li>
+<li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">CSS</a> Validator Results:</li>
+<li><a href="https://jshint.com/" target="_blank">JavaScript</a> Validator Results:</li>
+</ul>
 <h2>Feedback:</h2><hr>
+<ol>
+<li>Feedback:</li>
+<li>Feedback:</li>
+<li>Feedback:</li>
+<li>Feedback:</li>
+</ol>
 <h1>Technologies:</h1><!--Comment-->
 <img src="./assets/icons/Gitpod.svg" width="50px" height="50px">
 <h3>GitPod:</h3>
