@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/*The Core*/
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
@@ -5,6 +12,11 @@ body {
 canvas{
     box-shadow: black 20px 10px 50px
 }
+/*Toolbar*/
+.toolbar {
+    justify-content: center;
+}
+/*Play Again Button*/
 button {
     border: none;
     border-radius: 20px;
@@ -15,11 +27,38 @@ button:hover {
     cursor: pointer;
     background-color: bisque;
 }
-div > .playagain {
+.playagain {
     background-color: wheat;
-    width: 100px;
-    height: 100px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 20px;
-    display: flex;
     justify-content: center;
+}
+#playagain {
+    display:inline-block;
+    margin-right:10px;;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+}
+/*Grid*/
+#grid {
+    display:inline-block;
+}
+.grid {
+    cursor: pointer;
+}
+/*Theme*/
+#theme {
+    display:inline-block;
+    margin-right:10px;
+}
+/*Score*/
+#score {
+    display:inline-block;
+    margin-right:10px;
+}
+#highscore {
+    display:inline-block;
+    margin-right:10px;
 }
