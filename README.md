@@ -11,9 +11,9 @@
 <h1>Feedback & Updates</h1>
 <h2>Feedback:</h2>
 <ol>
-<li>Séan <q>I gave it a go, maybe add some kind of grid so it's easier to see if you're in line with the food,</q> <strong>10/23/2022</strong></li>
-<li>Feedback:</li>
-<li>Feedback:</li>
+<li>Séan <q>I gave it a go, maybe add some kind of grid so it's easier to see if you're in line with the food,</q> <strong>10/23/2022</strong></li><hr>
+<li>Þröstur <q>The only thing i can think of and i am not sure you control this or not, but the browser screen is just barely big enough for each time you press up or down, the screen goes up and down with it</q> <strong>10/25/2022</strong></li><hr>
+<li>Lianne <q>Game suddenly ends when a set length is reached (Screenshot provided)</q><strong>10/25/2022</strong></li><hr>
 <li>Feedback:</li>
 </ol><hr>
 <h2>Updates:</h2>
@@ -69,5 +69,7 @@
 <th>Community Executive
 <h3>Lane Sawyer<h3></th></tr>
 <tr><th>Testers 
-<h3>Séan</h3>
+<h3>Séan</h3><hr>
+<h3>Þröstur</h3><hr>
+<h3>Lianne</h3>
 </th></tr></table>
