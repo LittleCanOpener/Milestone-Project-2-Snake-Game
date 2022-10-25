@@ -13,8 +13,9 @@
 <ol>
 <li>Séan <q>I gave it a go, maybe add some kind of grid so it's easier to see if you're in line with the food,</q> <strong>10/23/2022</strong></li><hr>
 <li>Þröstur <q>The only thing i can think of and i am not sure you control this or not, but the browser screen is just barely big enough for each time you press up or down, the screen goes up and down with it</q> <strong>10/25/2022</strong></li><hr>
-<li>Ashe <q>Game suddenly ends when a set length is reached (Screenshot provided)</q><strong>10/25/2022</strong></li><hr>
-<li>Feedback:</li>
+<li>Ash <q>Game suddenly ends when a set length is reached (Screenshot provided)</q><strong>10/25/2022</strong></li><hr>
+<li>Victor <q>Best Score</q><strong>10/25/2022</strong></li><hr>
+<li>Brian <q>There is input lag and at one point the arrow keys caused the game to move/scroll during play</q><strong>10/25/2022</strong></li>
 </ol><hr>
 <h2>Updates:</h2>
 <ol>
@@ -71,5 +72,7 @@
 <tr><th>Testers 
 <h3>Séan</h3><hr>
 <h3>Þröstur</h3><hr>
-<h3>Lianne</h3>
+<h3>Ash</h3><hr>
+<h3>Brian</h3><hr>
+<h3>Victor</h3>
 </th></tr></table>

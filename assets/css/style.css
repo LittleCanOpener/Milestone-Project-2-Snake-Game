@@ -6,11 +6,30 @@
 }
 /*The Core*/
 body {
-    font-family: 'Courier New', Courier, monospace;
+    background-image: url(https://images.pexels.com/photos/5922856/pexels-photo-5922856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     text-align: center;
+    color: white;
 }
 canvas{
     box-shadow: black 20px 10px 50px
+}
+/*How to play*/
+#text {
+    text-align: center;
+    float: right;
+}
+.text{
+    color: white;
+    text-align: center;
+    font-size: 19px;
+    width: 30%;
+    height: fit-content;
+    display:inline-block;
+    justify-content: center;
+    text-align: center;
 }
 /*Toolbar*/
 .toolbar {
