@@ -15,8 +15,9 @@
 <li>Þröstur <q>The only thing i can think of and i am not sure you control this or not, but the browser screen is just barely big enough for each time you press up or down, the screen goes up and down with it</q> <strong>10/25/2022</strong></li><hr>
 <li>Ash <q>Game suddenly ends when a set length is reached (Screenshot provided)</q><strong>10/25/2022</strong></li><hr>
 <li>Victor <q>Best Score</q><strong>10/25/2022</strong></li><hr>
-<li>Brian <q>There is input lag and at one point the arrow keys caused the game to move/scroll during play</q><strong>10/25/2022</strong></li>
-</ol><hr>
+<li>Brian <q>There is input lag and at one point the arrow keys caused the game to move/scroll during play</q><strong>10/25/2022</strong></li><hr>
+<li>Rútur <q>Screen doesn't seem locked so arrow keys move everything up and down. Also it seems grid doesn't work (Game left a red scribble box, Screenshot Provided)</q><strong>10/25/2022</strong></li><hr>
+</ol>
 <h2>Updates:</h2>
 <ol>
 <li>Update:</li>
@@ -74,5 +75,6 @@
 <h3>Þröstur</h3><hr>
 <h3>Ash</h3><hr>
 <h3>Brian</h3><hr>
-<h3>Victor</h3>
+<h3>Victor</h3><hr>
+<h3>Rútur</h3>
 </th></tr></table>
