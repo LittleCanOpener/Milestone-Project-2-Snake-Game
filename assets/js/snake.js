@@ -1,4 +1,3 @@
-
 // Board
 var grid = document.querySelector(".grid")
 var blockSize = 25;
@@ -114,13 +113,3 @@ function placeFood() {
     foodX = Math.floor(Math.random() * cols) * blockSize;
     foodY = Math.floor(Math.random() * cols) * blockSize;
 }
-// Show Score
-function updateScore(){
-    const playerScorePara = document.getElementById("playerScore");
-    playerScorePara.textContent = `Player: ${playerScore}`;
-}
-// Event Listners
-choices.forEach(choice => choice.addEventListener('click', (event) => {
-	playRound(event);
-	updateScore()
-}));
