@@ -39,15 +39,42 @@ function changeDirection(e) {
     }
 }
 
-// Random Food Spawner
+// New Random Food Spawner
 function randomGridPostion(){
     return {
         foodX: Math.floor(Math.random() * grid) + 1,
-        foodY: Math.floor(Math.random() * grid) + 1,
+        foodY: Math.floor(Math.random() * grid) + 1
     }
 }
 // The Old Random Food Spawner
 function placeFood() {
     foodX = Math.floor(Math.random() * cols) * blockSize;
     foodY = Math.floor(Math.random() * cols) * blockSize;
+}
+
+// Outside the grid
+function outsideGrid(postion){
+    return (
+        postion.snakeX < 1 || postion.snakeX > blockSize ||
+        postion.snakeY < 1 || postion.snakeY > blockSize
+        )
+}
+
+function main(currentTime) {
+    if (gameOver) {
+        if (confirm('You lost. Press ok to restart.')){
+            window.location = '/'
+        }
+        return
+    }
+
+window.requestAnimationFrame(main)
+const secondsSinceLastRender = (currentTime - lastRenderTime) /1000
+if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
+
+lastRenderTime = currentTime
+
+update()
+draw()
+
 }
