@@ -68,7 +68,7 @@ function update() {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
     }
 // Game Over
-    if (snakeX < 0 || snakeX > x * blockSize || snakeY < 0 || snakeY > y * blockSize) {
+    if (snakeX < 0 || snakeX > x * blockSize -1 || snakeY < 0 || snakeY > y * blockSize -1) {
         gameOver = true;
         if (gameOver) {
             if (confirm('You lost. Press ok to restart.')){
@@ -122,9 +122,18 @@ function main() {
         return
     }
 }
-function checkDeath(){
-    gameOver = (outsideGrid(postion)) || snakeIntersection()
-}
-function snakeIntersection(){
-    return onSnake(snakeBody[0], {ignoreHead: true})
+function checkDeath() {
+    gameOver = outsideGrid(SnakeHead()) || Intersection()
+  }
+
+function SnakeHead() {
+    return snakeBody[0]
+  }
+  
+function Intersection() {
+    return onSnake(snakeBody[0], { ignoreHead: true })
+  }
+
+function checkDeath() {
+    gameOver = outsideGrid(SnakeHead()) || Intersection()
 }
