@@ -6,7 +6,7 @@ class snakePart{
         this.y=y;
     }
 }
-// _____________________________ Variables _______________________________ 
+// _____________________________ Variables _______________________________
 // Board
 let speed = 7;
 let blockSize = 20;
@@ -15,8 +15,8 @@ let y = 25; // Rows
 // Snake
 const snakeBody = [];
 let tailLength = 2;
-let snakeX = 10;
-let snakeY = 10;
+let headX = 10;
+let headY = 10;
 // Snake Speed
 let velocityX = 0;
 let velocityY = 0;
@@ -27,7 +27,7 @@ let foodY = 5;
 let gameOver = false;
 let score = 0;
 
-// _____________________________ FUNCTIONS _______________________________ 
+// _____________________________ FUNCTIONS _______________________________
 
 function drawGame(){
     changeDirection();
@@ -45,7 +45,7 @@ function drawGame(){
     setTimeout(drawGame, 1000/speed); // update screen 7 times a second
 }
 
-//____________________________________________________________ 
+//____________________________________________________________
 
 function isGameOver(){
     let gameOver = flase; 
@@ -53,21 +53,21 @@ function isGameOver(){
     if(velocityY===0 && velocityX===0){
         return flase;
     }
-    if (snakeX<0){//Collision Left wall.
+    if (headX<0){//Collision Left wall.
         gameOver=true;
     }
-    else if (snakeX===blockSize){//Collision Right wall.
+    else if (headX===blockSize){//Collision Right wall.
         gameOver=true;
     }
-    else if (snakeY<0){//Collision Top wall.
+    else if (headY<0){//Collision Top wall.
         gameOver=true;
     }
-    else if (snakeY===blockSize){//Collision Bottom wall.
+    else if (headY===blockSize){//Collision Bottom wall.
         gameOver=true;
     }
     for (let i=0; i<snakeParts.length;i++){
         let snakeParts=[i];
-        if(part.x===snakeX && part.y===snakeY){ //snake cannot occupy the same space
+        if(part.x===headX && part.y===headY){ //snake cannot occupy the same space
             gameOver=true;
             break; //break out of the loop
         }
@@ -81,7 +81,7 @@ function isGameOver(){
     return gameOver; // Stop the execution of drawgame.
 }
 
-//____________________________________________________________  
+//____________________________________________________________
 
 function drawScore(){
     ctx.fillstyle="White"//Color of the Text
@@ -107,18 +107,17 @@ function drawSnake(){
         let part=snakeParts[i]
         ctx.fillRect(part.x *blockSize, part.y *blockSize, tileSize,tileSize)
     }
-    snakeParts.push(new snakePart(snakeX, snakeY));
-    //put item at the end of list next to the head
+    snakeParts.push(new snakePart(headX, headY));    //put item at the end of list next to the head
     if (snakeParts.length>tailLength){
-        snakeParts.shift();
-        //remove furthest item from snake part if we have more than our tail size
+        snakeParts.shift();            //remove furthest item from snake part if we have more than our tail size
     } 
     ctx.fillStyle="orange";
-    ctx.fillRect(snakeX* blockSize,snakeY* blockSize, tileSize,tileSize)
+    ctx.fillRect(headX* blockSize,headY* blockSize, tileSize,tileSize)
 }
 
-//____________________________________________________________ 
+//____________________________________________________________
 
+document.body.addEventListener("keyup", changeDirection);
 function changeDirection(e) {
     if (e.code == "ArrowUp" && velocityY != 1) {
         velocityX = 0;
@@ -146,8 +145,8 @@ function placeFood() {
 //____________________________________________________________ 
 function outsideGrid(postion){
     return (
-        postion.snakeX < 1 || postion.snakeX > blockSize ||
-        postion.snakeY < 1 || postion.snakeY > blockSize
+        postion.headX < 1 || postion.headX > blockSize ||
+        postion.headY < 1 || postion.headY > blockSize
         )
 }
 //____________________________________________________________ 
@@ -180,7 +179,7 @@ function Intersection() {
 //____________________________________________________________
 
 function checkCollision(){
-    if(foodX==headX && foodY==snakeY){
+    if(foodX==headX && foodY==headY){
         foodX=Math.floor(Math.random()*blockSize);
         foodY=Math.floor(Math.random()*blockSize);
         tailLength++;

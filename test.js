@@ -34,7 +34,7 @@ function isGameOver(){
         gameOver=true;
     }
     for(let i=0; i<snakeParts.length;i++){
-        let snakeParts[i];
+        let snakePart=[i];
         if(part.x===headX && part.y===headY){ //snake cannot occupy the same space
             gameOver=true;
             break; //break out of the loop
