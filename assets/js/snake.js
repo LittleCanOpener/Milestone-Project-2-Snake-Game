@@ -1,9 +1,9 @@
 const canvas=document.getElementById('board');
 const ctx=canvas.getContext('2d');
 class snakePart{
-    constructor(x, y){
-        this.x=x;
-        this.y=y;
+    constructor(X, Y){
+        this.X=X;
+        this.X=X;
     }
 }
 // _____________________________ Variables _______________________________
@@ -48,10 +48,10 @@ function drawGame(){
 //____________________________________________________________
 
 function isGameOver(){
-    let gameOver = flase; 
+    let gameOver = false; 
     //check whether game has started
     if(velocityY===0 && velocityX===0){
-        return flase;
+        return false;
     }
     if (headX<0){//Collision Left wall.
         gameOver=true;
@@ -65,9 +65,9 @@ function isGameOver(){
     else if (headY===blockSize){//Collision Bottom wall.
         gameOver=true;
     }
-    for (let i=0; i<snakeParts.length;i++){
-        let snakeParts=[i];
-        if(part.x===headX && part.y===headY){ //snake cannot occupy the same space
+    for (let i=0; i<snakePart.length;i++){
+        let snakePart=[i];
+        if(part.X===headX && part.Y===headY){ //snake cannot occupy the same space
             gameOver=true;
             break; //break out of the loop
         }
@@ -103,13 +103,13 @@ function clearScreen(){
 function drawSnake(){
     ctx.fillstyle="green";
     // loop through your snakeparts array
-    for(let i=0;i<snakeParts.length;i++){
-        let part=snakeParts[i]
-        ctx.fillRect(part.x *blockSize, part.y *blockSize, tileSize,tileSize)
+    for(let i=0;i<snakePart.length;i++){
+        let part=snakePart[i]
+        ctx.fillRect(part.X *blockSize, part.Y *blockSize, tileSize,tileSize)
     }
-    snakeParts.push(new snakePart(headX, headY));    //put item at the end of list next to the head
-    if (snakeParts.length>tailLength){
-        snakeParts.shift();            //remove furthest item from snake part if we have more than our tail size
+    snakePart.push(new snakePart(headX, headY));    //put item at the end of list next to the head
+    if (snakePart.length>tailLength){
+        snakePart.shift();            //remove furthest item from snake part if we have more than our tail size
     } 
     ctx.fillStyle="orange";
     ctx.fillRect(headX* blockSize,headY* blockSize, tileSize,tileSize)
@@ -117,8 +117,8 @@ function drawSnake(){
 
 //____________________________________________________________
 
-document.body.addEventListener("keyup", changeDirection);
-function changeDirection(e) {
+document.body.addEventListener("keyup", keyUp);
+function keyUp(e){
     if (e.code == "ArrowUp" && velocityY != 1) {
         velocityX = 0;
         velocityY = -1;
@@ -186,6 +186,10 @@ function checkCollision(){
         score++; //increase our score value
     }
 }
+function changeDirection(){
+    headX=headX + velocityX;
+    headY=headY + velocityY;
+}
 
 //Other
-drawGame();
+  drawGame();
