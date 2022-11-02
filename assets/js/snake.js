@@ -1,5 +1,6 @@
 const canvas=document.getElementById('board');
 const ctx=canvas.getContext('2d');
+
 class snakePart{
     constructor(X, Y){
         this.X=X;
@@ -9,14 +10,14 @@ class snakePart{
 // _____________________________ Variables _______________________________
 // Board
 let speed = 7;
-let blockSize = 20;
-let x = 25; // Column
-let y = 25; // Rows
+let blockCount=20;
 // Snake
-const snakeBody = [];
-let tailLength = 2;
+let blockSize=canvas.clientWidth/blockCount-2;
 let headX = 10;
 let headY = 10;
+// Snake Array
+const snakeParts=[];
+let tailLength = 2;
 // Snake Speed
 let velocityX = 0;
 let velocityY = 0;
@@ -24,7 +25,6 @@ let velocityY = 0;
 let foodX = 5;
 let foodY = 5;
 // Game over
-let gameOver = false;
 let score = 0;
 
 // _____________________________ FUNCTIONS _______________________________
@@ -56,24 +56,24 @@ function isGameOver(){
     if (headX<0){//Collision Left wall.
         gameOver=true;
     }
-    else if (headX===blockSize){//Collision Right wall.
+    else if (headX===blockCount){//Collision Right wall.
         gameOver=true;
     }
     else if (headY<0){//Collision Top wall.
         gameOver=true;
     }
-    else if (headY===blockSize){//Collision Bottom wall.
+    else if (headY===blockCount){//Collision Bottom wall.
         gameOver=true;
     }
-    for (let i=0; i<snakePart.length;i++){
-        let snakePart=[i];
+    for (let i=0; i<snakeParts.length;i++){
+        let part=snakeParts=[i];
         if(part.X===headX && part.Y===headY){ //snake cannot occupy the same space
             gameOver=true;
             break; //break out of the loop
         }
     }
     if (gameOver){
-        ctx.fillstyle="white"
+        ctx.fillstyle="white";
         ctx.font="50px verdana";
         ctx.fillText("Game Over! ", canvas.clientWidth/6.5, canvas.clientHeight/2); 
         //Text Centered.
@@ -81,43 +81,74 @@ function isGameOver(){
     return gameOver; // Stop the execution of drawgame.
 }
 
-//____________________________________________________________
+//____________________________________________________________drawScore
 
 function drawScore(){
-    ctx.fillstyle="White"//Color of the Text
+    
+    ctx.fillstyle="white";//Color of the Text
     ctx.font="10px verdana"
     ctx.fillText("Score: " +score, canvas.clientWidth-50,10); 
     // Position set to the right hand corner
 }
 
-//____________________________________________________________ 
+//____________________________________________________________clearScreen
 
 function clearScreen(){
-    ctx.fillstyle="Black" // Screen set to black
+
+    ctx.fillstyle= 'black' // Screen set to black
     ctx.fillRect(0,0,canvas.clientWidth,canvas.clientHeight)
     // Black color starts from 0px left, right to canvas width and canvas height
+
 }
 
-//____________________________________________________________  
+//____________________________________________________________drawSnake
 
 function drawSnake(){
     ctx.fillstyle="green";
     // loop through your snakeparts array
-    for(let i=0;i<snakePart.length;i++){
-        let part=snakePart[i]
-        ctx.fillRect(part.X *blockSize, part.Y *blockSize, tileSize,tileSize)
+    for(let i=0;i<snakeParts.length;i++){
+        let part=snakeParts[i]
+        ctx.fillRect(part.X *blockCount, part.Y *blockCount, blockSize,blockSize)
     }
-    snakePart.push(new snakePart(headX, headY));    //put item at the end of list next to the head
-    if (snakePart.length>tailLength){
-        snakePart.shift();            //remove furthest item from snake part if we have more than our tail size
-    } 
+
+    snakeParts.push(new snakePart(headX, headY));    //put item at the end of list next to the head
+    if (snakeParts.length>tailLength){
+        snakeParts.shift();            //remove furthest item from snake part if we have more than our tail size
+    }
+
     ctx.fillStyle="orange";
-    ctx.fillRect(headX* blockSize,headY* blockSize, tileSize,tileSize)
+    ctx.fillRect(headX* blockCount,headY* blockCount, blockSize,blockSize)
+    
+}
+
+//____________________________________________________________changeDirection
+
+function changeDirection(){
+    headX=headX + velocityX;
+    headY=headY + velocityY;
+}
+
+//____________________________________________________________placeFood
+
+function placeFood(){
+    ctx.fillStyle="red";
+    ctx.fillRect(foodX*blockCount, foodY*blockCount, blockSize, blockSize)
+}
+
+//____________________________________________________________checkCollision
+
+function checkCollision(){
+    if(foodX==headX && foodY==headY){
+        foodX=Math.floor(Math.random()*blockCount);
+        foodY=Math.floor(Math.random()*blockCount);
+        tailLength++;
+        score++; //increase our score value
+    }
 }
 
 //____________________________________________________________
-
 document.body.addEventListener("keyup", keyUp);
+
 function keyUp(e){
     if (e.code == "ArrowUp" && velocityY != 1) {
         velocityX = 0;
@@ -139,14 +170,14 @@ function keyUp(e){
 
 //____________________________________________________________ 
 function placeFood() {
-    foodX = Math.floor(Math.random() * x) * blockSize;
-    foodY = Math.floor(Math.random() * x) * blockSize;
+    foodX = Math.floor(Math.random() * x) * blockCount;
+    foodY = Math.floor(Math.random() * x) * blockCount;
 }
 //____________________________________________________________ 
 function outsideGrid(postion){
     return (
-        postion.headX < 1 || postion.headX > blockSize ||
-        postion.headY < 1 || postion.headY > blockSize
+        postion.headX < 1 || postion.headX > blockCount ||
+        postion.headY < 1 || postion.headY > blockCount
         )
 }
 //____________________________________________________________ 
@@ -158,38 +189,7 @@ function main() {
         return
     }
 }
-//____________________________________________________________
 
-function checkDeath() {
-    gameOver = outsideGrid(SnakeHead()) || Intersection()
-  }
-
-//____________________________________________________________
-
-function SnakeHead() {
-    return snakeBody[0]
-  }
-
-//____________________________________________________________
-
-function Intersection() {
-    return onSnake(snakeBody[0], { ignoreHead: true })
-  }
-
-//____________________________________________________________
-
-function checkCollision(){
-    if(foodX==headX && foodY==headY){
-        foodX=Math.floor(Math.random()*blockSize);
-        foodY=Math.floor(Math.random()*blockSize);
-        tailLength++;
-        score++; //increase our score value
-    }
-}
-function changeDirection(){
-    headX=headX + velocityX;
-    headY=headY + velocityY;
-}
 
 //Other
   drawGame();

@@ -156,3 +156,24 @@ function collision() {
         }
     }
 }
+
+
+//____________________________________________________________
+
+function checkDeath() {
+    gameOver = outsideGrid(SnakeHead()) || Intersection()
+  }
+
+//____________________________________________________________
+
+function SnakeHead() {
+    return snakeParts[0]
+  }
+
+//____________________________________________________________
+
+function Intersection() {
+    return onSnake(snakeParts[0], { ignoreHead: true })
+  }
+
+//____________________________________________________________
