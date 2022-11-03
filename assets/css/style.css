@@ -15,8 +15,6 @@ body {
     color: white;
 }
 canvas{
-    width: 400;
-    height: 400;
     box-shadow: black 20px 10px 50px
 }
 /*How to play*/
@@ -33,4 +31,7 @@ canvas{
     display:inline-block;
     justify-content: center;
     text-align: center;
+}
+h1 {
+    margin-bottom: 1rem;
 }

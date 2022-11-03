@@ -10,7 +10,11 @@ class snakePart{
 // _____________________________ Variables _______________________________
 // Board
 let speed = 7;
-let blockCount=20;
+var blockCount=25;
+var rows = 20;
+var cols = 20;
+var board;
+var context;
 // Snake
 let blockSize=canvas.clientWidth/blockCount-2;
 let headX = 10;
@@ -22,8 +26,8 @@ let tailLength = 2;
 let velocityX = 0;
 let velocityY = 0;
 // Food
-let foodX = 5;
-let foodY = 5;
+let foodX;
+let foodY;
 // Game over
 let score = 0;
 
@@ -73,7 +77,7 @@ function isGameOver(){
         }
     }
     if (gameOver){
-        ctx.fillstyle="white";
+        ctx.fillStyle="white";
         ctx.font="50px verdana";
         ctx.fillText("Game Over! ", canvas.clientWidth/6.5, canvas.clientHeight/2); 
         //Text Centered.
@@ -85,7 +89,7 @@ function isGameOver(){
 
 function drawScore(){
     
-    ctx.fillstyle="white";//Color of the Text
+    ctx.fillStyle="white"; //Color of the Text
     ctx.font="10px verdana"
     ctx.fillText("Score: " +score, canvas.clientWidth-50,10); 
     // Position set to the right hand corner
@@ -94,31 +98,25 @@ function drawScore(){
 //____________________________________________________________clearScreen
 
 function clearScreen(){
+    board = document.getElementById("board")
+    board.height = rows * blockCount;
+    board.width = cols * blockCount; // Drawing the board
 
-    ctx.fillstyle= 'black' // Screen set to black
-    ctx.fillRect(0,0,canvas.clientWidth,canvas.clientHeight)
+    ctx.fillStyle='black'; // Screen set to black
+    ctx.fillRect(0, 0, board.width, board.height);
     // Black color starts from 0px left, right to canvas width and canvas height
 
 }
 
 //____________________________________________________________drawSnake
 
-function drawSnake(){
-    ctx.fillstyle="green";
-    // loop through your snakeparts array
-    for(let i=0;i<snakeParts.length;i++){
-        let part=snakeParts[i]
-        ctx.fillRect(part.X *blockCount, part.Y *blockCount, blockSize,blockSize)
-    }
-
-    snakeParts.push(new snakePart(headX, headY));    //put item at the end of list next to the head
-    if (snakeParts.length>tailLength){
-        snakeParts.shift();            //remove furthest item from snake part if we have more than our tail size
-    }
-
-    ctx.fillStyle="orange";
-    ctx.fillRect(headX* blockCount,headY* blockCount, blockSize,blockSize)
-    
+function drawSnake() {
+    ctx.fillStyle="lime";
+    headX += velocityX * blockCount;
+    headY += velocityY * blockCount;
+    ctx.fillRect(headX, headY, blockCount, blockCount);
+    for (let i = 0; i < snakeParts.length; i++) {
+        ctx.fillRect(snakeParts[i][0], snakeParts[i][1], blockCount, blockCount);}
 }
 
 //____________________________________________________________changeDirection
@@ -132,15 +130,15 @@ function changeDirection(){
 
 function placeFood(){
     ctx.fillStyle="red";
-    ctx.fillRect(foodX*blockCount, foodY*blockCount, blockSize, blockSize)
+    ctx.fillRect(foodX, foodY, blockCount, blockCount);
 }
 
 //____________________________________________________________checkCollision
 
 function checkCollision(){
     if(foodX==headX && foodY==headY){
-        foodX=Math.floor(Math.random()*blockCount);
-        foodY=Math.floor(Math.random()*blockCount);
+        foodX = Math.floor(Math.random() * cols) * blockCount;
+        foodY = Math.floor(Math.random() * rows) * blockCount;
         tailLength++;
         score++; //increase our score value
     }
@@ -166,12 +164,6 @@ function keyUp(e){
         velocityX = 1;
         velocityY = 0;
     }
-}
-
-//____________________________________________________________ 
-function placeFood() {
-    foodX = Math.floor(Math.random() * x) * blockCount;
-    foodY = Math.floor(Math.random() * x) * blockCount;
 }
 //____________________________________________________________ 
 function outsideGrid(postion){
