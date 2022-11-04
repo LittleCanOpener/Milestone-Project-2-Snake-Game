@@ -80,22 +80,23 @@ function drawSnake() {
     headX += velocityX * blockCount;
     headY += velocityY * blockCount;
     context.fillRect(headX, headY, blockCount, blockCount);
-
-    if (headX == foodX && headY == foodY){
-        snakeBody.push([foodX, foodY]);
-        placeFood();
+//__________
+    for (let i = 0; i < snakeBody.length; i++){
+        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockCount, blockCount);
     }
-
+//__________
     for (let i = snakeBody.length-1; i > 0; i--){
         snakeBody[i] = snakeBody[i-1];
     }
-
+//__________
     if (snakeBody.length){
         snakeBody[0] = [headX, headY];
     }
-
-    for (let i = 0; i < snakeBody.length; i++){
-        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockCount, blockCount);
+//__________
+    if (headX == foodX && headY == foodY){
+        snakeBody.push([foodX, foodY]);
+        placeFood(); // place a new food.
+        score++; // increase score
     }
 }
 //____________________________________________________________  Food Function
