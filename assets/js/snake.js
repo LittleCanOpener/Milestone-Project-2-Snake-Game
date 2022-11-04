@@ -131,4 +131,4 @@ function changeDirection(e){
 //____________________________________________________________
 update();
 
-// Needs grid function / Check death / Check collision / Fix the score counter / Restart mechanic / 
+// Needs grid function / Check death / Check collision  / Restart mechanic / 
