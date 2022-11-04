@@ -1,6 +1,24 @@
 # Snake-Game - Milestone Project 2.
-<h1>Features:</h1><!--Comment-->
+
 <h1>Deployment:</h1><!--Comment-->
+<h2>Using Github Pages</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
+<li>Click the 'Settings' Tab.</li>
+<li>Scroll Down to the Git Hub Pages Heading.</li>
+<li>Select 'Master Branch' as the source.</li>
+<li>Click the Save button.</li>
+<li>Click on the link to go to the live deployed page.</li></ul><hr><!--Comment-->
+<h2>Run Locally</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
+<li>Click the Code drop down menu.</li>
+<li>Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.</li>
+<li>Open your developement editor of choice and open a terminal window in a directory of your choice.</li>
+<li>Use the 'git clone' command in terminal followed by the copied git URL.
+A clone of the project will be created locally on your machine.</li></ul>
+<hr><!--Comment-->
+<h1>Features:</h1><!--Comment-->
+<h2>:</h2><hr><!--Comment-->
+<h2>:</h2><hr><!--Comment-->
+<h1>Design:</h1><!--Comment-->
+
 <h1>Testing:</h1><!--Comment-->
 <ul>
 <h3>Code Validators</h3>
