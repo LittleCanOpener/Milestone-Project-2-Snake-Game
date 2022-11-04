@@ -22,6 +22,7 @@ var score = 0;
 
 // _____________________________ FUNCTIONS _______________________________
 window.onload = function(){
+    document.addEventListener("keyup", changeDirection);
     // game over logic
     let result=isGameOver();
     if(result){// if result is true
@@ -30,16 +31,14 @@ window.onload = function(){
     placeFood();
     setInterval(update, 1000/10); // update screen
 }
-
+// ____________________________________________________________ Update 
 function update(){
     drawBoard(); // Draw the board
     drawFood(); // Draw the food
     drawSnake(); // Draw the snake
     drawScore(); // Draw the score
 }
-
-//____________________________________________________________
-
+//____________________________________________________________ Game Over
 function isGameOver(){
     //check whether game has started
     if(velocityY===0 && velocityX===0){
@@ -56,17 +55,15 @@ function isGameOver(){
     }
     return gameOver=true; // Stop the execution of drawgame.
 }
-//____________________________________________________________drawScore
-
+//____________________________________________________________  Score
 function drawScore(){
     
     context.fillStyle="white"; //Color of the Text
-    context.font="10px verdana"
-    context.fillText("Score: " +score, board.clientWidth-50,10); // Position set to the right hand corner
+    context.font="15px verdana"
+    context.fillText("Score: " +score, board.clientWidth-80,20); // Position set to the right hand corner
+    //80 = Left and right 20 = up and down
 }
-
-//____________________________________________________________drawBoard
-
+//____________________________________________________________  Board
 function drawBoard(){
     board=document.getElementById('board');
     context=board.getContext('2d');
@@ -77,9 +74,7 @@ function drawBoard(){
     context.fillRect(0, 0, board.width, board.height);
     // Black color starts from 0px left, right to board width and board height
 }
-
-//____________________________________________________________drawSnake
-
+//____________________________________________________________  Snake
 function drawSnake() {
     context.fillStyle="lime";
     headX += velocityX * blockCount;
@@ -90,27 +85,30 @@ function drawSnake() {
         snakeBody.push([foodX, foodY]);
         placeFood();
     }
-    for (i = snakeBody.length-1; i > 0; i--){
+
+    for (let i = snakeBody.length-1; i > 0; i--){
         snakeBody[i] = snakeBody[i-1];
     }
-    if (snakeBody.length) {
+
+    if (snakeBody.length){
         snakeBody[0] = [headX, headY];
     }
-    for (i = 0; i < snakeBody.length; i++) {
-        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockCount, blockCount);}
-}
 
-//____________________________________________________________Place/Draw Food
+    for (let i = 0; i < snakeBody.length; i++){
+        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockCount, blockCount);
+    }
+}
+//____________________________________________________________  Food
 function drawFood(){
     context.fillStyle="red";
     context.fillRect(foodX, foodY, blockCount, blockCount);
 }
+//____________________________________________________________ Random Food Placement
 function placeFood(){
     foodX = Math.floor(Math.random() * x) * blockCount;
     foodY = Math.floor(Math.random() * y) * blockCount;
 }
-//____________________________________________________________
-document.addEventListener("keyup", changeDirection);
+//____________________________________________________________ Key Bindings
 function changeDirection(e){
     if (e.code == "ArrowUp" && velocityY != 1) {
         velocityX = 0;
@@ -131,3 +129,5 @@ function changeDirection(e){
 }
 //____________________________________________________________
 update();
+
+// Needs grid function / Check death / Check collision / Fix the score counter / Restart mechanic / 
