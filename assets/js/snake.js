@@ -20,7 +20,7 @@ var foodY;
 var gameOver = false;
 var score = 0;
 
-// _____________________________ FUNCTIONS _______________________________
+// ____________________________________________________________ Main Function
 window.onload = function(){
     document.addEventListener("keyup", changeDirection);
     // game over logic
@@ -31,14 +31,14 @@ window.onload = function(){
     placeFood();
     setInterval(update, 1000/10); // update screen
 }
-// ____________________________________________________________ Update 
+// ____________________________________________________________ Update Function
 function update(){
     drawBoard(); // Draw the board
     drawFood(); // Draw the food
     drawSnake(); // Draw the snake
     drawScore(); // Draw the score
 }
-//____________________________________________________________ Game Over
+//____________________________________________________________ Game Over Function
 function isGameOver(){
     //check whether game has started
     if(velocityY===0 && velocityX===0){
@@ -55,7 +55,7 @@ function isGameOver(){
     }
     return gameOver=true; // Stop the execution of drawgame.
 }
-//____________________________________________________________  Score
+//____________________________________________________________  Score Function
 function drawScore(){
     
     context.fillStyle="white"; //Color of the Text
@@ -63,7 +63,7 @@ function drawScore(){
     context.fillText("Score: " +score, board.clientWidth-80,20); // Position set to the right hand corner
     //80 = Left and right 20 = up and down
 }
-//____________________________________________________________  Board
+//____________________________________________________________  Board Function
 function drawBoard(){
     board=document.getElementById('board');
     context=board.getContext('2d');
@@ -74,7 +74,7 @@ function drawBoard(){
     context.fillRect(0, 0, board.width, board.height);
     // Black color starts from 0px left, right to board width and board height
 }
-//____________________________________________________________  Snake
+//____________________________________________________________  Snake Function
 function drawSnake() {
     context.fillStyle="lime";
     headX += velocityX * blockCount;
@@ -98,17 +98,17 @@ function drawSnake() {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockCount, blockCount);
     }
 }
-//____________________________________________________________  Food
+//____________________________________________________________  Food Function
 function drawFood(){
     context.fillStyle="red";
     context.fillRect(foodX, foodY, blockCount, blockCount);
 }
-//____________________________________________________________ Random Food Placement
+//____________________________________________________________ Random Food Placement Function
 function placeFood(){
     foodX = Math.floor(Math.random() * x) * blockCount;
     foodY = Math.floor(Math.random() * y) * blockCount;
 }
-//____________________________________________________________ Key Bindings
+//____________________________________________________________ Key Bindings Function
 function changeDirection(e){
     if (e.code == "ArrowUp" && velocityY != 1) {
         velocityX = 0;
