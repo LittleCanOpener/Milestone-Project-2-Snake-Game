@@ -10,7 +10,6 @@ var headX = blockCount * 5;
 var headY = blockCount * 5;
 // Snake Array
 var snakeBody=[];
-var tailLength = 2;
 // Snake Speed
 var velocityX = 0;
 var velocityY = 0;
@@ -22,17 +21,21 @@ var gameOver = false;
 var score = 0;
 
 // _____________________________ FUNCTIONS _______________________________
-window.onload = function drawGame(){
+window.onload = function(){
     // game over logic
     let result=isGameOver();
     if(result){// if result is true
         return;// to break out of the loop
     };
+    placeFood();
+    setInterval(update, 1000/10); // update screen
+}
+
+function update(){
     drawBoard(); // Draw the board
     drawFood(); // Draw the food
     drawSnake(); // Draw the snake
     drawScore(); // Draw the score
-    setTimeout(drawGame, 1000/10); // update screen
 }
 
 //____________________________________________________________
@@ -82,7 +85,18 @@ function drawSnake() {
     headX += velocityX * blockCount;
     headY += velocityY * blockCount;
     context.fillRect(headX, headY, blockCount, blockCount);
-    for (let i = 0; i < snakeBody.length; i++) {
+
+    if (headX == foodX && headY == foodY){
+        snakeBody.push([foodX, foodY]);
+        placeFood();
+    }
+    for (i = snakeBody.length-1; i > 0; i--){
+        snakeBody[i] = snakeBody[i-1];
+    }
+    if (snakeBody.length) {
+        snakeBody[0] = [headX, headY];
+    }
+    for (i = 0; i < snakeBody.length; i++) {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockCount, blockCount);}
 }
 
@@ -116,5 +130,4 @@ function changeDirection(e){
     }
 }
 //____________________________________________________________
-// þarf að setja upp update function sem verður kallað á reglulega heldur en það sem ég er með á "drawgame" en er önnur leið, 
-//sem krefst ekki að fara yfir það allt helfur en að breyta drawfuntion í update function?
+update();
