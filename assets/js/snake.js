@@ -1,6 +1,6 @@
 // _____________________________ Variables _______________________________
 // Board
-var blockCount=25;
+var blockCount = 25;
 var x = 20;
 var y = 20;
 var board;
@@ -24,7 +24,7 @@ var score = 0;
 window.onload = function(){
     document.addEventListener("keyup", changeDirection);
     // game over logic
-    let result=isGameOver();
+    let result=checkDeath();
     if(result){// if result is true
         return;// to break out of the loop
     };
@@ -33,27 +33,21 @@ window.onload = function(){
 }
 // ____________________________________________________________ Update Function
 function update(){
+    checkDeath();
     drawBoard(); // Draw the board
     drawFood(); // Draw the food
     drawSnake(); // Draw the snake
     drawScore(); // Draw the score
 }
 //____________________________________________________________ Game Over Function
-function isGameOver(){
-    //check whether game has started
-    if(velocityY===0 && velocityX===0){
-        return false;
+function checkDeath(){
+    collision();
+    if (gameOver) {
+        if (confirm('You lost. Press ok to restart.')){
+            window.location.reload = './'
+        }
+        return;
     }
-    if (headX < 0 || headX > x * blockCount || headY < 0 || headY > y * blockCount ){
-        gameOver=true;
-    }
-    if (gameOver){
-        context.fillStyle="white";
-        context.font="50px verdana";
-        context.fillText("Game Over! ", board.clientWidth/6.5, board.clientHeight/2); 
-        //Text Centered.
-    }
-    return gameOver=true; // Stop the execution of drawgame.
 }
 //____________________________________________________________  Score Function
 function drawScore(){
@@ -126,6 +120,14 @@ function changeDirection(e){
     else if (e.code == "ArrowRight" && velocityX != -1) {
         velocityX = 1;
         velocityY = 0;
+    }
+}
+//____________________________________________________________ Intersection
+
+//____________________________________________________________ Collision
+function collision(){
+    if (headX < 0 || headX > x * blockCount || headY < 0 || headY > y * blockCount) {
+        gameOver = true;
     }
 }
 //____________________________________________________________

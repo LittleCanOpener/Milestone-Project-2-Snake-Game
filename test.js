@@ -8,6 +8,16 @@ function main() {
 }
 
 
+if (gameOver){
+    context.fillStyle="white";
+    context.font="50px verdana";
+    context.fillText("Game Over! ", board.clientWidth/6.5, board.clientHeight/2); 
+    //Text Centered.
+}
+return gameOver=true; // Stop the execution of drawgame
+
+
+
 function board() {
     context.fillstyle="black"
     context.fillRect(0, 0, board.width, board.height)
@@ -72,7 +82,7 @@ function snake() {
 }
 
 function collision() {
-    if (snakeX < 0 || snakeX > x * blockSize -1 || snakeY < 0 || snakeY > y * blockSize -1) {
+    if (headX < 0 || headX > x * blockSize -1 || headY < 0 || headY > y * blockSize -1) {
         gameOver = true;
         if (gameOver) {
             if (confirm('You lost. Press ok to restart.')){
@@ -93,13 +103,18 @@ function checkDeath() {
 //____________________________________________________________
 
 function SnakeHead() {
-    return snakeParts[0]
+    return snakeBody[0]
   }
 
 //____________________________________________________________
 
 function Intersection() {
-    return onSnake(snakeParts[0], { ignoreHead: true })
+    return onSnake(snakeBody[0],)
   }
 
 //____________________________________________________________
+function outsideGrid() {
+    return (    
+        postition.x < 1 || postition.x > blockCount ||
+        postition.y < 1 || postition.y > blockCount)
+}
