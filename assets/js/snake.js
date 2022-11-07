@@ -16,19 +16,25 @@ var velocityY = 0;
 // Food
 var foodX;
 var foodY;
-// Game over
+// Game Over
 var gameOver = false;
+// Score
 var score = 0;
 
 // ____________________________________________________________ Main Function
 window.onload = function(){
-    document.addEventListener("keyup", changeDirection);
-    // game over logic
+    document.addEventListener("keyup", changeDirection); // Allows the user to start the game by going up
+    document.addEventListener("keydown", changeDirection); // Allows the user to start the game by going down
+    document.addEventListener("keyleft", changeDirection); // Allows the user to start the game by going left
+    document.addEventListener("keyright", changeDirection); // Allows the user to start the game by going right
     placeFood();
-    setInterval(update, 1000/10); // Run Update Function
+    setInterval(update, 1000/10); // Run Update Function 100 Times Milliseconds
 }
 // ____________________________________________________________ Update Function
 function update(){
+    if (gameOver) {
+        return;
+    }
     drawBoard(); // Draw the board
     drawFood(); // Draw the food
     drawSnake(); // Draw the snake
@@ -122,6 +128,13 @@ function checkDeath(){
             alert("Game Over");
         }
         return gameOver;
+    }
+//____________________________________________________________ Restart
+    if (gameOver) {
+        if (confirm('You lost. Press ok to restart.')){
+            window.location.reload("./");
+        }
+        return
     }
 }
 //____________________________________________________________

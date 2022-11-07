@@ -119,7 +119,35 @@ function outsideGrid() {
         postition.y < 1 || postition.y > blockCount)
 }
 
+//JAJAJAJAJA
+//_____________________________ GRID _______________________________ 
+function outsideGrid(postion){
+    return (
+        postion.snakeX < 1 || postion.snakeX > blockSize ||
+        postion.snakeY < 1 || postion.snakeY > blockSize
+        )
+}
+//_____________________________ GAMEOVER _______________________________ 
+function main() {
+    if (gameOver) {
+        if (confirm('You lost. Press ok to restart.')){
+            window.location = '/'
+        }
+        return
+    }
+}
+function checkDeath() {
+    gameOver = outsideGrid(SnakeHead()) || Intersection()
+  }
 
-function main(){
-    
+function SnakeHead() {
+    return snakeBody[0]
+  }
+  
+function Intersection() {
+    return onSnake(snakeBody[0], { ignoreHead: true })
+  }
+
+function checkDeath() {
+    gameOver = outsideGrid(SnakeHead()) || Intersection()
 }
