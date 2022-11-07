@@ -114,29 +114,18 @@ function changeDirection(e){
         velocityY = 0;
     }
 }
-//____________________________________________________________ Collision & Intersection
+//____________________________________________________________ Death & Restart
 function checkDeath(){
     if (headX < 0 || headX > x * blockCount -1 || headY < 0 || headY > y * blockCount -1) {
         gameOver=true;
-        alert("Game Over");
-        return gameOver;
-    }
-//____________________________________________________________ Intersection
-    for (let i = 0; i < snakeBody.length; i++){
-        if (headX === snakeBody[i][0] && headY === snakeBody[i][1]){
-            gameOver = true;
-            alert("Game Over");
+        if (gameOver) {
+            if (confirm('You lost. Press ok to restart.')){
+                window.location.reload("./");
+            }
+            return gameOver;
         }
-        return gameOver;
-    }
-//____________________________________________________________ Restart
-    if (gameOver) {
-        if (confirm('You lost. Press ok to restart.')){
-            window.location.reload("./");
-        }
-        return
     }
 }
 //____________________________________________________________
 
-// Needs grid function / Check death / Check collision  / Restart mechanic / 
+// Check death / Check collision 
