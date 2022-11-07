@@ -40,6 +40,7 @@ function update(){
     drawSnake(); // Draw the snake
     drawScore(); // Draw the score
     checkDeath(); // Check Death
+    intersection(); // Check intersection
 }
 //____________________________________________________________  Score Function
 function drawScore(){
@@ -114,7 +115,7 @@ function changeDirection(e){
         velocityY = 0;
     }
 }
-//____________________________________________________________ Death & Restart
+//____________________________________________________________ Grid Collision & Restart
 function checkDeath(){
     if (headX < 0 || headX > x * blockCount -1 || headY < 0 || headY > y * blockCount -1) {
         gameOver=true;
@@ -126,6 +127,19 @@ function checkDeath(){
         }
     }
 }
+//____________________________________________________________ Intersection
+function intersection() {
+    if (headX===snakeBody[i][0] && headX===snakeBody[i][1]){
+        gameOver=true;
+        if (gameOver) {
+            if (confirm('You lost. Press ok to restart.')){
+                window.location.reload("./");
+            }
+            return gameOver;
+        }
+    }
+  }
 //____________________________________________________________
+
 
 // Check death / Check collision 
