@@ -24,30 +24,16 @@ var score = 0;
 window.onload = function(){
     document.addEventListener("keyup", changeDirection);
     // game over logic
-    let result=checkDeath();
-    if(result){// if result is true
-        return;// to break out of the loop
-    };
     placeFood();
-    setInterval(update, 1000/10); // update screen
+    setInterval(update, 1000/10); // Run Update Function
 }
 // ____________________________________________________________ Update Function
 function update(){
-    checkDeath();
     drawBoard(); // Draw the board
     drawFood(); // Draw the food
     drawSnake(); // Draw the snake
     drawScore(); // Draw the score
-}
-//____________________________________________________________ Game Over Function
-function checkDeath(){
-    collision();
-    if (gameOver) {
-        if (confirm('You lost. Press ok to restart.')){
-            window.location.reload = './'
-        }
-        return;
-    }
+    checkDeath(); // Check Death
 }
 //____________________________________________________________  Score Function
 function drawScore(){
@@ -122,15 +108,22 @@ function changeDirection(e){
         velocityY = 0;
     }
 }
+//____________________________________________________________ Collision & Intersection
+function checkDeath(){
+    if (headX < 0 || headX > x * blockCount -1 || headY < 0 || headY > y * blockCount -1) {
+        gameOver=true;
+        alert("Game Over");
+        return gameOver;
+    }
 //____________________________________________________________ Intersection
-
-//____________________________________________________________ Collision
-function collision(){
-    if (headX < 0 || headX > x * blockCount || headY < 0 || headY > y * blockCount) {
-        gameOver = true;
+    for (let i = 0; i < snakeBody.length; i++){
+        if (headX === snakeBody[i][0] && headY === snakeBody[i][1]){
+            gameOver = true;
+            alert("Game Over");
+        }
+        return gameOver;
     }
 }
 //____________________________________________________________
-update();
 
 // Needs grid function / Check death / Check collision  / Restart mechanic / 

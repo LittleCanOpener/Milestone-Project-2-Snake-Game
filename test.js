@@ -118,3 +118,8 @@ function outsideGrid() {
         postition.x < 1 || postition.x > blockCount ||
         postition.y < 1 || postition.y > blockCount)
 }
+
+
+function main(){
+    
+}
