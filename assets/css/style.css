@@ -8,30 +8,37 @@
 /*The Core*/
 body {
     background-color: darkslategray;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
     color: white;
+    width: 100vmin;
+    height: 100vmin;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
 }
 canvas{
     box-shadow: black 20px 10px 50px
 }
 /*How to play*/
+
 #text {
-    text-align: center;
-    float: right;
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
 .text{
+    display: inline-block;
     color: white;
-    text-align: center;
-    font-size: 19px;
-    width: 30%;
-    height: fit-content;
-    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
     justify-content: center;
     text-align: center;
+    width: 50%;
+    margin-bottom: 20px;
 }
 h1 {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: inline-block;
 }
