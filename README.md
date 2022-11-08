@@ -2,12 +2,18 @@
 <!------------------Comment------------------>
 <h1>Features:</h1>
 <h2>Instructions on how to play:</h2><hr>
+<p>Instructions should be clear and simple to read for anyone</p>
 <img src="./assets/images/HowToPlay.png">
 <h2>Restart Popup:</h2><hr>
+<p>An option that allows the user to restart the game without refreshing.<br>
+The restart will reset the snake and score and choose a random location for the food.</p>
 <img src="./assets/images/Restart.png">
 <h2>Board Including Snake & Food:</h2><hr>
+<p>Board colored black so it's easy to see the Snake & Food,<br>
+Food being Red and the Snake Green.</p>
 <img src="./assets/images/Game.png">
 <h2>Score counter:</h2><hr>
+<p>A score counter that will count every food piece you eat.</p>
 <img src="./assets/images/Score.png">
 <!------------------Comment------------------>
 <h2>Color Scheme:</h2><hr><!--Comment-->
@@ -24,7 +30,7 @@ Background = Dark Slate of Gray<hr>
 <li>Select 'Master Branch' as the source.</li>
 <li>Click the Save button.</li>
 <li>Click on the link to go to the live deployed page.</li></ul><hr>
-<!------------------Comment------------------>
+
 <h2>Run Locally</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
 <li>Click the Code drop down menu.</li>
 <li>Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.</li>
@@ -33,7 +39,8 @@ Background = Dark Slate of Gray<hr>
 A clone of the project will be created locally on your machine.</li></ul><hr>
 <!------------------Comment------------------>
 
-<h1>User Experience:</h1><hr>
+<h1>User Experience:</h1>
+<p>Users should be greeted by instructions on how to play the game and the game itself, The text with instructions on how to play the game are white and stand out from the background explaining both controls and the objective of the game.</p><hr>
 <!------------------Comment------------------>
 <h1>Testing:</h1>
 <ul>
@@ -56,9 +63,8 @@ A clone of the project will be created locally on your machine.</li></ul><hr>
 </ol>
 <h2>Additional Explanations:</h2>
 <ol>
-<li>Comments inside ReadME</li>
-<li>Comments inside the Javascript</li>
-<li>Reason for test.js</li>
+<li>Comments inside the Javascript and ReadME.File color code for when a text or code ends making it easier to navigate the code making it simpler for people with autism & dyslexia to navigate and keep track of where they are. (It's why some are made longer than normal comments)</li>
+<li>I made test.js to copy my code and store there for safe keeping as I found myself addicted tearing things apart and mixing other codes together, It was use as a place I could always retreat to safety.</li>
 </ol>
 <!------------------Comment------------------>
 <h1>Technologies:</h1>
