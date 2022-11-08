@@ -26,6 +26,12 @@ A clone of the project will be created locally on your machine.</li></ul>
 
 <h2>User Experience:</h2><hr><!--Comment-->
 
+<h2>Color Scheme:</h2><hr><!--Comment-->
+<img src="./assets/images/Snake.png" width="50px" height="50px"><br>Snake = Lime<hr>
+<img src="./assets/images/Food.png" width="50px" height="50px"><br>Food = Red<hr>
+<img src="./assets/images/Board.png" width="50px" height="50px"><br>Board = Black<hr>
+<img src="./assets/images/Background.png" width="50px" height="50px"><br>
+Background = Dark Slate of Gray<hr>
 <h1>Testing:</h1><!--Comment-->
 <ul>
 <h3>Code Validators</h3>
