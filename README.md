@@ -42,6 +42,13 @@ A clone of the project will be created locally on your machine.</li></ul><hr>
 <h1>User Experience:</h1>
 <p>Users should be greeted by instructions on how to play the game and the game itself, The text with instructions on how to play the game are white and stand out from the background explaining both controls and the objective of the game.</p><hr>
 <!------------------Comment------------------>
+<h2>Additional Explanations:</h2>
+<ol>
+<li>Comments inside the Javascript and ReadME.File color code for when a text or code ends making it easier to navigate the code making it simpler for people with autism & dyslexia to navigate and keep track of where they are. (It's why some are made longer than normal comments)</li>
+<li>I made test.js to copy my code and store there for safe keeping as I found myself addicted tearing things apart and mixing other codes together, It was use as a place I could always retreat to safety.</li>
+<li>I went with setInterval instade of setTimeout because it's faster and it makes the game more smooth, on the down side it also makes the snake slightly faster but that's alright as the more you progress the infinitely harder the game will become.</li>
+</ol>
+<!------------------Comment------------------>
 <h1>Testing:</h1>
 <ul>
 <h3>Code Validators</h3>
@@ -60,11 +67,6 @@ A clone of the project will be created locally on your machine.</li></ul><hr>
 <li><h3>Victor</h3><q>Seeing my score would be nice.</q></li><hr><!--Comment-->
 <li><h3>Brian</h3><q>There is input lag and at one point the arrow keys caused the game to move/scroll during play</q></li><hr><!--Comment-->
 <li><h3>Rútur</h3><q>Screen doesn't seem locked so arrow keys move everything up and down. Also it seems grid doesn't work</q></li><hr><!--Comment-->
-</ol>
-<h2>Additional Explanations:</h2>
-<ol>
-<li>Comments inside the Javascript and ReadME.File color code for when a text or code ends making it easier to navigate the code making it simpler for people with autism & dyslexia to navigate and keep track of where they are. (It's why some are made longer than normal comments)</li>
-<li>I made test.js to copy my code and store there for safe keeping as I found myself addicted tearing things apart and mixing other codes together, It was use as a place I could always retreat to safety.</li>
 </ol>
 <!------------------Comment------------------>
 <h1>Technologies:</h1>
