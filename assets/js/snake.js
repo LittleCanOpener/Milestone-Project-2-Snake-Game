@@ -35,13 +35,11 @@ function update(){
     if (gameOver) {
         return;
     }
-    intersection(); // Check intersection
     drawBoard(); // Draw the board
     drawFood(); // Draw the food
     drawSnake(); // Draw the snake
     drawScore(); // Draw the score
     checkDeath(); // Check Death
-    
 }
 //____________________________________________________________  Score Function
 function drawScore(){
@@ -68,24 +66,24 @@ function drawSnake() {
     headX += velocityX * blockCount;
     headY += velocityY * blockCount;
     context.fillRect(headX, headY, blockCount, blockCount);
-//__________
     for (let i = 0; i < snakeBody.length; i++){
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockCount, blockCount);
     }
-//__________
-    for (let i = snakeBody.length-1; i > 0; i--){
-        snakeBody[i] = snakeBody[i-1];
-    }
-//__________
-    if (snakeBody.length){
-        snakeBody[0] = [headX, headY];
-    }
-//__________
+
     if (headX == foodX && headY == foodY){
         snakeBody.push([foodX, foodY]);
         placeFood(); // place a new food.
         score++; // increase score
     }
+
+    for (let i = snakeBody.length-1; i > 0; i--){
+        snakeBody[i] = snakeBody[i-1];
+    }
+    if (snakeBody.length){
+        snakeBody[0] = [headX, headY];
+    }
+
+
 }
 //____________________________________________________________  Food Function
 function drawFood(){
@@ -120,27 +118,18 @@ function changeDirection(e){
 function checkDeath(){
     if (headX < 0 || headX > x * blockCount -1 || headY < 0 || headY > y * blockCount -1) {
         gameOver=true;
+        }
+    for (let i = 1; i < snakeBody.length; i++) {
+        if (headX == snakeBody[i][0] && headY == snakeBody[i][1]) {
+                gameOver = true;
+        }
+      }
         if (gameOver) {
             if (confirm('You lost. Press ok to restart.')){
                 window.location.reload("./");
             }
             return gameOver;
         }
-    }
-}
-//____________________________________________________________ Intersection
-function intersection() {
-    for (let i = 0; i < snakeBody.length; i++) {
-        if (headX == snakeBody[i][0] && headY == snakeBody[i][0]) { // PROBLEM IS HERE!  
-            gameOver=true;
-        if (gameOver) {
-            if (confirm('You lost. Press ok to restart.')){
-                window.location.reload("./");
-            }
-            return gameOver;
-        }
-    }
-  }
 }
 //____________________________________________________________
 
