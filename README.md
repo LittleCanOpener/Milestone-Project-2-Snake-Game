@@ -1,38 +1,41 @@
 # Snake-Game - Milestone Project 2.
-
-<h1>Deployment:</h1><!--Comment-->
-<h2>Using Github Pages</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
-<li>Click the 'Settings' Tab.</li>
-<li>Scroll Down to the Git Hub Pages Heading.</li>
-<li>Select 'Master Branch' as the source.</li>
-<li>Click the Save button.</li>
-<li>Click on the link to go to the live deployed page.</li></ul><hr><!--Comment-->
-<h2>Run Locally</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
-<li>Click the Code drop down menu.</li>
-<li>Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.</li>
-<li>Open your developement editor of choice and open a terminal window in a directory of your choice.</li>
-<li>Use the 'git clone' command in terminal followed by the copied git URL.
-A clone of the project will be created locally on your machine.</li></ul>
-<hr><!--Comment-->
-<h1>Features:</h1><!--Comment-->
-
-<h2>Instructions on how to play:</h2><hr><!--Comment-->
+<!------------------Comment------------------>
+<h1>Features:</h1>
+<h2>Instructions on how to play:</h2><hr>
 <img src="./assets/images/HowToPlay.png">
-<h2>Score counter:</h2><hr><!--Comment-->
-<img src="./assets/images/Score.png">
-<h2>Restart Popup:</h2><hr><!--Comment-->
+<h2>Restart Popup:</h2><hr>
 <img src="./assets/images/Restart.png">
-<h2>Board Including Snake & Food:</h2><hr><!--Comment-->
+<h2>Board Including Snake & Food:</h2><hr>
 <img src="./assets/images/Game.png">
-<h2>User Experience:</h2><hr><!--Comment-->
-
+<h2>Score counter:</h2><hr>
+<img src="./assets/images/Score.png">
+<!------------------Comment------------------>
 <h2>Color Scheme:</h2><hr><!--Comment-->
 <img src="./assets/images/Snake.png" width="50px" height="50px"><br>Snake = Lime<hr>
 <img src="./assets/images/Food.png" width="50px" height="50px"><br>Food = Red<hr>
 <img src="./assets/images/Board.png" width="50px" height="50px"><br>Board = Black<hr>
 <img src="./assets/images/Background.png" width="50px" height="50px"><br>
 Background = Dark Slate of Gray<hr>
-<h1>Testing:</h1><!--Comment-->
+<!------------------Comment------------------>
+<h1>Deployment:</h1>
+<h2>Using Github Pages</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
+<li>Click the 'Settings' Tab.</li>
+<li>Scroll Down to the Git Hub Pages Heading.</li>
+<li>Select 'Master Branch' as the source.</li>
+<li>Click the Save button.</li>
+<li>Click on the link to go to the live deployed page.</li></ul><hr>
+<!------------------Comment------------------>
+<h2>Run Locally</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
+<li>Click the Code drop down menu.</li>
+<li>Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.</li>
+<li>Open your developement editor of choice and open a terminal window in a directory of your choice.</li>
+<li>Use the 'git clone' command in terminal followed by the copied git URL.
+A clone of the project will be created locally on your machine.</li></ul><hr>
+<!------------------Comment------------------>
+
+<h1>User Experience:</h1><hr>
+<!------------------Comment------------------>
+<h1>Testing:</h1>
 <ul>
 <h3>Code Validators</h3>
 <li><a href="https://validator.w3.org/nu/#textarea" target="_blank">HTML</a> Validator Results:</li>
@@ -41,7 +44,7 @@ Background = Dark Slate of Gray<hr>
 <li><a href="https://ui.dev/amiresponsive" target="_blank">Am I Responsive</a> Validator Results:</li>
 <li><a href="#" target="_blank">Lighthouse</a> Validator Results:</li>
 <li><a href="#" target="_blank">Testers</a> Validator Results:</li>
-</ul><!--Comment-->
+</ul><!------------------Comment------------------>
 <h1>Feedback & Updates</h1>
 <h2>Feedback:</h2>
 <ol>
@@ -57,27 +60,27 @@ Background = Dark Slate of Gray<hr>
 <li>Comments inside the Javascript</li>
 <li>Reason for test.js</li>
 </ol>
-
-<h1>Technologies:</h1><!--Comment-->
+<!------------------Comment------------------>
+<h1>Technologies:</h1>
 <img src="./assets/icons/Gitpod.svg" width="50px" height="50px">
 <h3>GitPod:</h3>
 <a href="https://www.gitpod.io/" target="_blank">GitPod</a>
 <p>Was used to write up the code for my project and using the GitPod terminal to commit everything to GitHub.</p><h4>Why GitPod:<br>
-Gitpod continuously builds your git branches like a CI server so that you can start coding right away, no more waiting for dependencies to download and builds to finish.<!--Comment--><hr>
-
+Gitpod continuously builds your git branches like a CI server so that you can start coding right away, no more waiting for dependencies to download and builds to finish.<hr>
+<!------------------Comment------------------>
 <img src="./assets/icons/Github.svg" width="50px" height="50px">
 <h3>GitHub:</h3>
 <a href="https://github.com/" target="_blank">GitHub</a>
-<p>Was used to store all the code for this project after being pushed from GitPod.</p><h4>Why GitHub:<br>Well It's used for storing, tracking, and collaborating on software projects. It makes it easy for developers to share code files and collaborate with fellow developers on open-source projects. GitHub also serves as a social networking site where developers can openly network, collaborate, and pitch their work</h4><!--Comment--><hr>
-
+<p>Was used to store all the code for this project after being pushed from GitPod.</p><h4>Why GitHub:<br>Well It's used for storing, tracking, and collaborating on software projects. It makes it easy for developers to share code files and collaborate with fellow developers on open-source projects. GitHub also serves as a social networking site where developers can openly network, collaborate, and pitch their work</h4><hr>
+<!------------------Comment------------------>
 <img src="./assets/icons/GoogleDevTools.png" width="50px" height="50px" role="img" viewBox="0 0 24 24">
 <h3>Google Chrome Developer Tools:</h3>
 <p>Chrome Developer Tools is a comprehensive toolkit for developers, built directly into the Chrome browser. These tools let you edit web pages in real time, diagnose problems more quickly, and build better websites faster.
 <br><h3>Developer Tools:</h3>
  Was used for trouble shooting and trying new visual changes without it affect the current code already created.
 <ol><li>Elements was used to solve problems related to HTML & CSS.</li>
-<li>Console was used to solve problems related to Javascript.</li></ol></p><!--Comment--><hr>
-
+<li>Console was used to solve problems related to Javascript.</li></ol></p><hr>
+<!------------------Comment------------------>
 <img src="./assets/icons/lighthouse-google.webp" width="55px" height="40px" role="img" viewBox="0 0 24 24">
 <h3>Lighthouse:</h3>
 <a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk/related?hl=en" target="_blank">Lighthouse Extension</a>
@@ -85,28 +88,28 @@ Gitpod continuously builds your git branches like a CI server so that you can st
 <p>A high Lighthouse score also means that you have a well performing website. The speed that a page loads at is extremely important as users do not want to sit around waiting for your webpage to load.</p>
 <h4>How to access Lighthouse without Extension:</h4>
 <ol><li>On Chrome and you are on Windows you can press F12 on your keyboard and it will open the developer tool. From there you can access Lighthouse</li>
-<li>You can also right click on pages and click "Inspect" and you'll have the same pathway to Lighthouse through developer tools.</li></ol><!--Comment--><hr>
-
+<li>You can also right click on pages and click "Inspect" and you'll have the same pathway to Lighthouse through developer tools.</li></ol><hr>
+<!------------------Comment------------------>
 <img src="./assets/icons/HTML.png" width="50px" height="50px">
 <h3>HTML:</h3>
 <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>
 <p>Was used to construct the core of the website.</p>
-<p><h4>Why HTML :</h4>HTML code ensures the proper formatting of text and images for Internet browsers. Without HTML, a browser would not know how to display text as elements or load images or other elements.</p><!--Comment--><hr>
-
+<p><h4>Why HTML :</h4>HTML code ensures the proper formatting of text and images for Internet browsers. Without HTML, a browser would not know how to display text as elements or load images or other elements.</p><hr>
+<!------------------Comment------------------>
 <img src="./assets/icons/CSS.png" width="50px" height="50px">
 <h3>CSS:</h3>
 <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a>
 <p>Was used to style the website after the core was made and<br>
 makes the front-end of a website shine and it creates a great user experience</p>
-<p><h4>Why CSS :</h4>CSS makes the front-end of a website shine and it creates a great user experience. Without CSS, websites would be less pleasing to the eye and likely much harder to navigate. In addition to layout and format, CSS is responsible for font color and more.</p><!--Comment--><hr>
-
+<p><h4>Why CSS :</h4>CSS makes the front-end of a website shine and it creates a great user experience. Without CSS, websites would be less pleasing to the eye and likely much harder to navigate. In addition to layout and format, CSS is responsible for font color and more.</p><hr>
+<!------------------Comment------------------>
 <img src="./assets/icons/javascript-icon.png" width="50px" height="50px">
 <h3>JavaScript:</h3>
 <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
 <p>Makes responsive design easier.</p>
-<p><h4>Why JavaScript :</h4>JavaScript has become integral to the Internet experience as developers build increased interaction and complexity into their applications. Search engines, ecommerce, content management systems, responsive design, social media and phone apps would not be possible without it.</p><!--Comment--><hr>
-
-<h1>Special Thanks & Acknowledgements</h1><!--Comment-->
+<p><h4>Why JavaScript :</h4>JavaScript has become integral to the Internet experience as developers build increased interaction and complexity into their applications. Search engines, ecommerce, content management systems, responsive design, social media and phone apps would not be possible without it.</p><hr>
+<!------------------Comment------------------>
+<h1>Special Thanks & Acknowledgements</h1>
 <table><tr>
 <th>Mentor
 <h3>Ronan McClelland</h3></th>
