@@ -17,13 +17,13 @@ A clone of the project will be created locally on your machine.</li></ul>
 <h1>Features:</h1><!--Comment-->
 
 <h2>Instructions on how to play:</h2><hr><!--Comment-->
-
+<img src="./assets/images/HowToPlay.png">
 <h2>Score counter:</h2><hr><!--Comment-->
-
+<img src="./assets/images/Score.png">
 <h2>Restart Popup:</h2><hr><!--Comment-->
-
+<img src="./assets/images/Restart.png">
 <h2>Board Including Snake & Food:</h2><hr><!--Comment-->
-
+<img src="./assets/images/Game.png">
 <h2>User Experience:</h2><hr><!--Comment-->
 
 <h2>Color Scheme:</h2><hr><!--Comment-->
