@@ -114,7 +114,7 @@ function changeDirection(e){
         velocityY = 0;
     }
 }
-//____________________________________________________________ Grid Collision & Restart
+//____________________________________________________________ Grid Collision & Restart, intersection 
 function checkDeath(){
     if (headX < 0 || headX > x * blockCount -1 || headY < 0 || headY > y * blockCount -1) {
         gameOver=true;
@@ -132,6 +132,3 @@ function checkDeath(){
         }
 }
 //____________________________________________________________
-
-
-// Check death / Check collision 
