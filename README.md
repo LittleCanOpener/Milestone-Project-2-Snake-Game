@@ -15,9 +15,16 @@
 A clone of the project will be created locally on your machine.</li></ul>
 <hr><!--Comment-->
 <h1>Features:</h1><!--Comment-->
-<h2>:</h2><hr><!--Comment-->
-<h2>:</h2><hr><!--Comment-->
-<h1>Design:</h1><!--Comment-->
+
+<h2>Instructions on how to play:</h2><hr><!--Comment-->
+
+<h2>Score counter:</h2><hr><!--Comment-->
+
+<h2>Restart Popup:</h2><hr><!--Comment-->
+
+<h2>Board Including Snake & Food:</h2><hr><!--Comment-->
+
+<h2>User Experience:</h2><hr><!--Comment-->
 
 <h1>Testing:</h1><!--Comment-->
 <ul>
@@ -44,6 +51,7 @@ A clone of the project will be created locally on your machine.</li></ul>
 <li>Comments inside the Javascript</li>
 <li>Reason for test.js</li>
 </ol>
+
 <h1>Technologies:</h1><!--Comment-->
 <img src="./assets/icons/Gitpod.svg" width="50px" height="50px">
 <h3>GitPod:</h3>
