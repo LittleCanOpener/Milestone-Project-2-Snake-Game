@@ -132,7 +132,7 @@ makes the front-end of a website shine and it creates a great user experience</p
 </th></tr></table>
 
 <h1>Credits</h1>
-<a href ="ttps://www.pngegg.com/
+<a href ="https://www.pngegg.com/
 " target="_blank">Icons</a> Logos for the ReadME<br>
 <!------------------------Comment------------------------>
 <a href ="https://codeinstitute.net/global/
