@@ -25,23 +25,24 @@ A clone of the project will be created locally on your machine.</li></ul>
 <li><a href="https://validator.w3.org/nu/#textarea" target="_blank">HTML</a> Validator Results:</li>
 <li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">CSS</a> Validator Results:</li>
 <li><a href="https://jshint.com/" target="_blank">JavaScript</a> Validator Results:</li>
-</ul>
+<li><a href="https://ui.dev/amiresponsive" target="_blank">Am I Responsive</a> Validator Results:</li>
+<li><a href="#" target="_blank">Lighthouse</a> Validator Results:</li>
+<li><a href="#" target="_blank">Testers</a> Validator Results:</li>
+</ul><!--Comment-->
 <h1>Feedback & Updates</h1>
 <h2>Feedback:</h2>
 <ol>
-<li><h3>Séan</h3><q>I gave it a go, maybe add some kind of grid so it's easier to see if you're in line with the food,</q></li><hr>
-<li><h3>Þröstur</h3><q>The only thing i can think of and i am not sure you control this or not, but the browser screen is just barely big enough for each time you press up or down, the screen goes up and down with it</q></li><hr>
-<li><h3>Ash</h3><q>Game suddenly ends when a set length is reached (Screenshot Provided)</q></li><hr>
-<li><h3>Victor</h3><q>Seeing my best score would be nice.</q></li><hr>
-<li><h3>Brian</h3><q>There is input lag and at one point the arrow keys caused the game to move/scroll during play</q></li><hr>
-<li><h3>Rútur</h3><q>Screen doesn't seem locked so arrow keys move everything up and down. Also it seems grid doesn't work (Screenshot Provided)</q></li><hr>
+<li><h3>Þröstur</h3><q>The only thing i can think of and i am not sure you control this or not, but the browser screen is just barely big enough for each time you press up or down, the screen goes up and down with it</q></li><hr><!--Comment-->
+<li><h3>Ash</h3><q>Game suddenly ends when a set length is reached</q></li><hr><!--Comment-->
+<li><h3>Victor</h3><q>Seeing my score would be nice.</q></li><hr><!--Comment-->
+<li><h3>Brian</h3><q>There is input lag and at one point the arrow keys caused the game to move/scroll during play</q></li><hr><!--Comment-->
+<li><h3>Rútur</h3><q>Screen doesn't seem locked so arrow keys move everything up and down. Also it seems grid doesn't work</q></li><hr><!--Comment-->
 </ol>
-<h2>Updates:</h2>
+<h2>Additional Explanations:</h2>
 <ol>
-<li>Update:</li>
-<li>Update:</li>
-<li>Update:</li>
-<li>Update:</li>
+<li>Comments inside ReadME</li>
+<li>Comments inside the Javascript</li>
+<li>Reason for test.js</li>
 </ol>
 <h1>Technologies:</h1><!--Comment-->
 <img src="./assets/icons/Gitpod.svg" width="50px" height="50px">
@@ -99,10 +100,40 @@ makes the front-end of a website shine and it creates a great user experience</p
 <th>Community Executive
 <h3>Lane Sawyer<h3></th></tr>
 <tr><th>Testers 
-<h3>Séan</h3><hr>
 <h3>Þröstur</h3><hr>
 <h3>Ash</h3><hr>
 <h3>Brian</h3><hr>
 <h3>Victor</h3><hr>
 <h3>Rútur</h3>
 </th></tr></table>
+
+<h1>Credits</h1>
+<a href ="www.pngegg.com
+" target="_blank">Icons</a> Logos for the ReadME<br>
+<!------------------------Comment------------------------>
+<a href ="https://codeinstitute.net/global/
+" target="_blank">Code Institude</a><br>
+<!------------------------Comment------------------------>
+<a href ="https://www.sololearn.com/
+" target="_blank">Sololearn</a><br>
+<!------------------------Comment------------------------>
+<a href ="https://www.w3schools.com/
+" target="_blank">W3schools</a><br>
+<!------------------------Comment------------------------>
+<a href ="https://stackoverflow.com/
+" target="_blank">Stackoverflow</a><br><hr>
+<!------------------------Comment------------------------>
+<a href ="https://github.com/Kamau-ke/How-to-buid-snake-game-with-javaScript/blob/main/snake%20game/index.js
+" target="_blank">Ian Kamau GitHub</a><hr>
+<!------------------------Comment------------------------>
+<a href ="https://github.com/WebDevSimplified/Javascript-Snake-Game
+" target="_blank">Web Dev Simplified GitHub</a><br>
+<!------------------------Comment------------------------>
+<a href ="https://www.youtube.com/watch?v=QTcIXok9wNY" target="_blank">
+Web Dev Simplified Youtube Channel
+</a><hr>
+<!------------------------Comment------------------------>
+<a href ="https://github.com/ImKennyYip/snake" target="_blank">Kenny Yip GitHub</a><br>
+<!------------------------Comment------------------------>
+<a href ="https://www.youtube.com/watch?v=baBq5GAL0_U" target="_blank">Kenny Yip Coding Youtube Channel</a><hr>
+<!------------------------Comment------------------------>
