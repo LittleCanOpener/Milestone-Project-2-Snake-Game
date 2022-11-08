@@ -35,12 +35,13 @@ function update(){
     if (gameOver) {
         return;
     }
+    intersection(); // Check intersection
     drawBoard(); // Draw the board
     drawFood(); // Draw the food
     drawSnake(); // Draw the snake
     drawScore(); // Draw the score
     checkDeath(); // Check Death
-    intersection(); // Check intersection
+    
 }
 //____________________________________________________________  Score Function
 function drawScore(){
@@ -129,8 +130,9 @@ function checkDeath(){
 }
 //____________________________________________________________ Intersection
 function intersection() {
-    if (headX===snakeBody[i][0] && headX===snakeBody[i][1]){
-        gameOver=true;
+    for (let i = 0; i < snakeBody.length; i++) {
+        if (headX == snakeBody[i][0] && headY == snakeBody[i][0]) { // PROBLEM IS HERE!  
+            gameOver=true;
         if (gameOver) {
             if (confirm('You lost. Press ok to restart.')){
                 window.location.reload("./");
@@ -139,6 +141,7 @@ function intersection() {
         }
     }
   }
+}
 //____________________________________________________________
 
 

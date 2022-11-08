@@ -96,12 +96,6 @@ function collision() {
 
 //____________________________________________________________
 
-function checkDeath() {
-    gameOver = outsideGrid(SnakeHead()) || Intersection()
-  }
-
-//____________________________________________________________
-
 function SnakeHead() {
     return snakeBody[0]
   }
