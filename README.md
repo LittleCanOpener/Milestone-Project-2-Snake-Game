@@ -149,7 +149,7 @@ makes the front-end of a website shine and it creates a great user experience</p
 <a href ="https://stackoverflow.com/
 " target="_blank">Stackoverflow</a><br><hr>
 <!------------------------Comment------------------------>
-<a href ="https://github.com/Kamau-ke/How-to-buid-snake-game-with-javaScript/blob/main/snake%20game/index.js
+<a href ="https://github.com/Kamau-ke/How-to-buid-snake-game-with-javaScript/tree/main/snake%20game
 " target="_blank">Ian Kamau GitHub</a><hr>
 <!------------------------Comment------------------------>
 <a href ="https://github.com/WebDevSimplified/Javascript-Snake-Game
