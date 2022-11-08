@@ -132,8 +132,10 @@ makes the front-end of a website shine and it creates a great user experience</p
 </th></tr></table>
 
 <h1>Credits</h1>
+<a href ="https://gyazo.com/
+" target="_blank">Gyazo</a> Images for the ReadME<br>
 <a href ="https://www.pngegg.com/
-" target="_blank">Icons</a> Logos for the ReadME<br>
+" target="_blank">Pngegg</a> Icons for the ReadME<br>
 <!------------------------Comment------------------------>
 <a href ="https://codeinstitute.net/global/
 " target="_blank">Code Institude</a><br>
