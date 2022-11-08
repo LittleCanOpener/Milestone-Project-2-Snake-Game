@@ -56,10 +56,9 @@ A clone of the project will be created locally on your machine.</li></ul><hr>
 <li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">CSS</a> Validator Results:</li>
 <li><a href="https://jshint.com/" target="_blank">JavaScript</a> Validator Results:</li>
 <li><a href="https://ui.dev/amiresponsive" target="_blank">Am I Responsive</a> Validator Results:</li>
-<li><a href="#" target="_blank">Lighthouse</a> Validator Results:</li>
-<li><a href="#" target="_blank">Testers</a> Validator Results:</li>
+<li>Lighthouse Validator Results:</li>
 </ul><!------------------Comment------------------>
-<h1>Feedback & Updates</h1>
+<h1>Feedback From Friends & Family</h1>
 <h2>Feedback:</h2>
 <ol>
 <li><h3>Þröstur</h3><q>The only thing i can think of and i am not sure you control this or not, but the browser screen is just barely big enough for each time you press up or down, the screen goes up and down with it</q></li><hr><!--Comment-->
