@@ -46,9 +46,16 @@ A clone of the project will be created locally on your machine.</li></ul><hr>
 <!------------------Comment------------------>
 <h2>Additional Explanations:</h2>
 <ol>
-<li>Comments inside the Javascript and ReadME.File color code for when a text or code ends making it easier to navigate the code making it simpler for people with autism & dyslexia to navigate and keep track of where they are. (It's why some are made longer than normal comments)</li>
-<li>I made test.js to copy my code and store there for safe keeping as I found myself addicted tearing things apart and mixing other codes together, It was use as a place I could always retreat to safety.</li>
+<li>Comments inside the Javascript and ReadME.File color code for when a text or code ends making it easier to navigate the code making it simpler for people with any form of learning disability to navigate and keep track of where they are. (It's why some are made longer than normal comments)</li>
+<li>I made test.js as a scratch note to copy my code and store there for safe keeping as I found myself addicted tearing things apart and mixing other codes together, It is not apart of the final stage of this project</li>
 <li>I went with setInterval instade of setTimeout because it's faster and it makes the game more smooth, on the down side it also makes the snake slightly faster but that's alright as the more you progress the infinitely harder the game will become.</li>
+</ol>
+<h3>Github Terminal Commands</h3>
+<ol>
+<li>git add .</li>
+<li>git commit -m "(Text)"</li>
+<li>git push</li>
+<li>git status</li>
 </ol>
 <!------------------Comment------------------>
 <h1>Testing:</h1>
