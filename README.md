@@ -52,10 +52,14 @@ A clone of the project will be created locally on your machine.</li></ul><hr>
 <h1>Testing:</h1>
 <ul>
 <h3>Code Validators</h3>
-<li><a href="https://validator.w3.org/nu/#textarea" target="_blank">HTML</a> Validator Results:</li>
-<li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">CSS</a> Validator Results:</li>
+<li><a href="https://validator.w3.org/nu/#textarea" target="_blank">HTML</a> Validator Results:</li><img src="./assets/images/validators/HTMLValidator.png">
+<li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">CSS</a> Validator Results:</li><img src="./assets/images/validators/CSSValidator.png">
 <li><a href="https://jshint.com/" target="_blank">JavaScript</a> Validator Results:</li>
-<li><a href="https://ui.dev/amiresponsive" target="_blank">Am I Responsive</a> Validator Results:</li>
+<li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">Contrast Checker</a> Validator Results:</li><img src="./assets/images/validators/ContrastValidator1.png">
+<img src="./assets/images/validators/ContrastValidator2.png">
+<img src="./assets/images/validators/ContrastValidator3.png">
+<img src="./assets/images/validators/ContrastValidator4.png">
+<p>Due to Contrast4 Failing I added a white border</p>
 <li>Lighthouse Validator Results:</li>
 </ul><!------------------Comment------------------>
 <h1>Feedback From Friends & Family</h1>
