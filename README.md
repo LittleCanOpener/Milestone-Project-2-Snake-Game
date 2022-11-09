@@ -71,7 +71,7 @@ The game is intended for Desktop or Laptop users as the controls are bound to th
 <img src="./assets/images/validators/ContrastValidator2.png">
 <img src="./assets/images/validators/ContrastValidator3.png">
 <img src="./assets/images/validators/ContrastValidator4.png">
-<p>Due to Contrast4 Failing I added a white border</p>
+<p>Due to Contrast4 Failing I added a white border spliting the darker colors from eachother</p>
 <li>Lighthouse Validator Results:</li><hr><h4>Desktop: <strong>PASS</strong></h4>
 <img src="./assets/images/validators/LighthouseDesktop.png"><hr>
 <h4>Moblie: <strong>PASS</strong></h4>
@@ -162,13 +162,16 @@ makes the front-end of a website shine and it creates a great user experience</p
 " target="_blank">Code Institude</a><br>
 <!------------------------Comment------------------------>
 <a href ="https://www.sololearn.com/
-" target="_blank">Sololearn</a><br>
+" target="_blank">Sololearn</a> Used for studing Javascript<br>
 <!------------------------Comment------------------------>
 <a href ="https://www.w3schools.com/
-" target="_blank">W3schools</a><br>
+" target="_blank">W3schools</a> Used for studing Javascript also Used for problem solving and finding solutions (First Choice)<br>
 <!------------------------Comment------------------------>
 <a href ="https://stackoverflow.com/
-" target="_blank">Stackoverflow</a><br><hr>
+" target="_blank">Stackoverflow</a> Used for advanced problems and finding solutions (Second Choice) <br>
+<!------------------------Comment------------------------>
+<a href ="https://favicon.io/
+" target="_blank">FavIcon</a> Used for the Icon for the website<br><hr>
 <!------------------------Comment------------------------>
 <p>I found inspiration from these three. And their tutorial guides absolutely fenomenal work</p><hr>
 <!------------------------Comment------------------------>
