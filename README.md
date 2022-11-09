@@ -60,7 +60,10 @@ A clone of the project will be created locally on your machine.</li></ul><hr>
 <img src="./assets/images/validators/ContrastValidator3.png">
 <img src="./assets/images/validators/ContrastValidator4.png">
 <p>Due to Contrast4 Failing I added a white border</p>
-<li>Lighthouse Validator Results:</li>
+<li>Lighthouse Validator Results:</li>Desktop:
+<img src="./assets/images/validators/LighthouseDesktop.png">
+Moblie:
+<img src="./assets/images/validators/LighthouseMoblie.png">
 </ul><!------------------Comment------------------>
 <h1>Feedback From Friends & Family</h1>
 <h2>Feedback:</h2>
