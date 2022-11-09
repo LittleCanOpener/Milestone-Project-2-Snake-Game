@@ -1,4 +1,5 @@
 // _____________________________ Variables _______________________________
+/*jshint esversion: 6 */
 // Board
 var blockCount = 25;
 var x = 20;
