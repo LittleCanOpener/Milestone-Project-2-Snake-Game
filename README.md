@@ -1,5 +1,6 @@
 # Snake-Game - Milestone Project 2.
 <!------------------Comment------------------>
+<img src="./assets/images/validators/AmIResponsive.png">
 <h1>Features:</h1>
 <h2>Instructions on how to play:</h2><hr>
 <p>Instructions should be clear and simple to read for anyone</p>
