@@ -159,7 +159,7 @@ makes the front-end of a website shine and it creates a great user experience</p
 <a href ="https://stackoverflow.com/
 " target="_blank">Stackoverflow</a><br><hr>
 <!------------------------Comment------------------------>
-<p>I found inspiration from these three. And their tutorial guides absolutely fenomenal work put into their work</p><hr>
+<p>I found inspiration from these three. And their tutorial guides absolutely fenomenal work</p><hr>
 <!------------------------Comment------------------------>
 <a href ="https://github.com/Kamau-ke/How-to-buid-snake-game-with-javaScript/tree/main/snake%20game
 " target="_blank">Ian Kamau GitHub</a><hr>
