@@ -7,8 +7,8 @@
 
 /*The Core*/
 body {
-    background-color: darkslategray;
-    color: white;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
     width: 100vmin;
     height: 100vmin;
     justify-content: center;
@@ -17,6 +17,7 @@ body {
 
 }
 canvas{
+    border: 3px solid #FFFFFF;
     box-shadow: black 20px 10px 50px
 }
 /*How to play*/

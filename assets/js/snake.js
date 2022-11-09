@@ -29,7 +29,7 @@ window.onload = function(){
     document.addEventListener("keyright", changeDirection); // Allows the user to start the game by going right
     placeFood();
     setInterval(update, 1000/10); // Run Update Function 100 Times Milliseconds
-}
+};
 // ____________________________________________________________ Update Function
 function update(){
     if (gameOver) {
@@ -45,7 +45,7 @@ function update(){
 function drawScore(){
     
     context.fillStyle="white"; //Color of the Text
-    context.font="15px verdana"
+    context.font="15px verdana";
     context.fillText("Score: " +score, board.clientWidth-80,20); // Position set to the right hand corner
     //80 = Left and right 20 = up and down
 }
