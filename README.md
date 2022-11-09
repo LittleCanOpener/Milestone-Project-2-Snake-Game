@@ -64,17 +64,17 @@ The game is intended for Desktop or Laptop users as the controls are bound to th
 <h1>Testing:</h1>
 <ul>
 <h3>Code Validators</h3>
-<li><a href="https://validator.w3.org/nu/#textarea" target="_blank">HTML</a> Validator Results:</li><img src="./assets/images/validators/HTMLValidator.png">
-<li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">CSS</a> Validator Results:</li><img src="./assets/images/validators/CSSValidator.png">
-<li><a href="https://jshint.com/" target="_blank">JavaScript</a> Validator Results:</li><img src="./assets/images/validators/JSHintValidator.png">
-<li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">Contrast Checker</a> Validator Results:</li><img src="./assets/images/validators/ContrastValidator1.png">
+<li><a href="https://validator.w3.org/nu/#textarea" target="_blank">HTML</a> Validator Results: <strong>PASS</strong></li><img src="./assets/images/validators/HTMLValidator.png">
+<li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">CSS</a> Validator Results: <strong>PASS</strong></li><img src="./assets/images/validators/CSSValidator.png">
+<li><a href="https://jshint.com/" target="_blank">JavaScript</a> Validator Results: <strong>PASS</strong></li><img src="./assets/images/validators/JSHintValidator.png">
+<li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">Contrast Checker</a> Validator Results: <strong>PASSED 1,2,3 FAILED 4</strong></li><img src="./assets/images/validators/ContrastValidator1.png">
 <img src="./assets/images/validators/ContrastValidator2.png">
 <img src="./assets/images/validators/ContrastValidator3.png">
 <img src="./assets/images/validators/ContrastValidator4.png">
 <p>Due to Contrast4 Failing I added a white border</p>
-<li>Lighthouse Validator Results:</li><hr><h4>Desktop:</h4>
+<li>Lighthouse Validator Results:</li><hr><h4>Desktop: <strong>PASS</strong></h4>
 <img src="./assets/images/validators/LighthouseDesktop.png"><hr>
-<h4>Moblie:</h4>
+<h4>Moblie: <strong>PASS</strong></h4>
 <img src="./assets/images/validators/LighthouseMoblie.png"><hr>
 </ul><!------------------Comment------------------>
 <h2>Known Bugs:</h2><br>
