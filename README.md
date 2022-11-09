@@ -66,6 +66,8 @@ A clone of the project will be created locally on your machine.</li></ul><hr>
 <h4>Moblie:</h4>
 <img src="./assets/images/validators/LighthouseMoblie.png"><hr>
 </ul><!------------------Comment------------------>
+<h2>Known Bugs:</h2><br>
+<p>Error message narrowed down to only BitHub, Running it locally works perfectly fine.<img src="./assets/images/validators/Error1.png"></p><hr>
 <h1>Feedback From Friends & Family</h1>
 <h2>Feedback:</h2>
 <ol>
