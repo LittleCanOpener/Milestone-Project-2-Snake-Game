@@ -24,14 +24,15 @@ Food being Red and the Snake Green.</p>
 <img src="./assets/images/Background.png" width="50px" height="50px"><br>
 Background = Dark Slate of Gray<hr>
 <!------------------Comment------------------>
+
 <h1>Deployment:</h1>
 <h2>Using Github Pages</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
 <li>Click the 'Settings' Tab.</li>
 <li>Scroll Down to the Git Hub Pages Heading.</li>
 <li>Select 'Master Branch' as the source.</li>
 <li>Click the Save button.</li>
-<li>Click on the link to go to the live deployed page.</li></ul><hr>
-
+<li>Click on the link to go to the live deployed page.</li></ul>
+<h2>My Game Live</h2><a href="https://littlecanopener.github.io/Milestone-Project-2-Snake-Game/" target="_blank">Here</a><hr>
 <h2>Run Locally</h2><li>Navigate to the GitHub <a href="#" target="_blank">Repository</a>:</li>
 <li>Click the Code drop down menu.</li>
 <li>Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.</li>
